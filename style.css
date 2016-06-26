@@ -316,8 +316,16 @@ ul h4 {
             transition: all .25s ease;
 }
 
-#menu menu li ul li a {
-    
+#menu  ul ul{
+   /* min-width: 200px; */
+}
+
+#menu ul ul li a {
+    text-align:left;
+    font-size:0.8em;
+    line-height: 30px;
+    height:30px; 
+    padding:5px 10px;
 }
 
 #menu .dropdown:after {
