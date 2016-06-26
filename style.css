@@ -276,18 +276,17 @@ ul h4 {
 }
 
 #menu ul li {
-	padding: 0 15px 0 15px;
+	padding: 0;
 	display: inline;
 }
 
 
 #menu ul {
 /*	-webkit-font-smoothing:antialiased; */
-	text-shadow:0 1px 0 #FFF;
     background: #ddd;
     list-style: none;
     margin: 0;
-	padding: 0 25px 0 25px;
+	padding: 0 0px 0 0px;
     width: 100%;
 }
 
@@ -298,6 +297,7 @@ ul h4 {
     position: relative;
     min-width: 25%;
 }
+
 #menu a {
     color: #1D1D1D;
 	text-transform: uppercase;
@@ -315,18 +315,45 @@ ul h4 {
          -o-transition: all .25s ease;
             transition: all .25s ease;
 }
+
+#menu menu li ul li a {
+    
+}
+
 #menu .dropdown:after {
-    content: ' ▶';
+    content: ' \25bc';
 }
+
 #menu .dropdown:hover:after{
-	content:'\25bc'
+	content:' \25bc'
 }
-#menu li:hover a {
+
+#menu  li:hover a {
     background: rgba(255,255,255,0.3);
 }
+
+#menu li:hover ul li a {
+    background: rgba(0,0,0,0);
+}
+
+#menu li ul li:hover a {
+    background: rgba(255,255,255,0.3);
+}
+
+
 #menu li ul {
-    float: left;
-    left: 0;
+
+    background: #A74444;
+	background-image: linear-gradient(top, #A74444, #C76464);
+	background-image: -moz-linear-gradient(top, #A74444, #C76464);
+	background-image: -webkit-linear-gradient(top, #A74444, #C76464);
+	background-image: -o-linear-gradient(top, #A74444, #C76464);
+	background-image: -ms-linear-gradient(top, #A74444, #C76464);
+    border-radius: 5px;
+	box-shadow: inset 0px 0px 0px 1px #872424, inset 0px 2px 0px 0px #F79494, inset 0px 0px 0px 2px #E78484;
+
+    float: left; 
+    left: 0px;
     opacity: 0;
     position: absolute;
     top: 35px;
@@ -338,17 +365,22 @@ ul h4 {
          -o-transition: all .25s ease;
             transition: all .25s ease;
 }
+
 #menu li:hover ul {
     opacity: 1;
-    top: 50px;
+    top: 60px;
     visibility: visible;
 }
+
 #menu li ul li {
+    border: 0px;
+    padding: 0px;
     float: none;
     width: 100%;
 }
+
 #menu li ul a:hover {
-    background: #bbb;
+
 }
 
 /* Clearfix */
@@ -357,9 +389,11 @@ ul h4 {
     content:"";
     display:table;
 }
+
 #cf:after {
     clear:both;
 }
+
 #cf {
     zoom:1;
 }​
